@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html>
-<header role="banner" class="navbar navbar-fixed-top navbar-inverse">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Ma page</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-      <div class="container">
-        <div class="navbar-header">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+      <div class="container-fluid">
+<h1>football sphère</h1>
+<form name="formbarre">
+ <input type="text" name="barre" id="barre" value= "recherche..." />
+ <input type="button" onclick="rechercher() " value="start" />
+</form>
+
+	<div class="navbar-header">
+
           <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-        </div>
+        
         <div class="navbar-inverse side-collapse in">
+
           <nav role="navigation" class="navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="#Home">Accueil</a></li>
-              <li><a href="#users">Users</a></li>
-              <li><a href="http://placesforlove.com">Places</a></li>
+              <li><a href="index.phtml">Accueil</a></li>
+              <li><a href="#Championnat">Championnat</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
-          </nav>
-        </div>
-      </div>
-
-    <body>
 <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-    Connexion
+    Log in
 </button>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -30,28 +38,28 @@
 
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				<h4 class="modal-title" id="myModalLabel">Connexion</h4>
+				<h4 class="modal-title" id="myModalLabel">Log in</h4>
 			</div> <!-- /.modal-header -->
 
 			<div class="modal-body">
 				<form role="form">
 					<div class="form-group">
 						<div class="input-group">
-							<input type="text" class="form-control" id="uLogin" placeholder="Identifiant">
+							<input type="text" class="form-control" id="uLogin" placeholder="Login">
 							<label for="uLogin" class="input-group-addon glyphicon glyphicon-user"></label>
 						</div>
 					</div> <!-- /.form-group -->
 
 					<div class="form-group">
 						<div class="input-group">
-							<input type="password" class="form-control" id="uPassword" placeholder="Mot de passe">
+							<input type="password" class="form-control" id="uPassword" placeholder="Password">
 							<label for="uPassword" class="input-group-addon glyphicon glyphicon-lock"></label>
 						</div> <!-- /.input-group -->
 					</div> <!-- /.form-group -->
 
 					<div class="checkbox">
 						<label>
-							<input type="checkbox">Se souvenir
+							<input type="checkbox"> Remember me
 						</label>
 					</div> <!-- /.checkbox -->
 				</form>
@@ -60,7 +68,7 @@
 
 			<div class="modal-footer">
 				<button class="form-control btn btn-primary">Ok</button>
-
+		<a href="inscription.phtml">Vous n'avez pas de compte ?</a>
 				<div class="progress">
 					<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="100" style="width: 0%;">
 						<span class="sr-only">progress</span>
@@ -71,15 +79,58 @@
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </header>
-    <div class="container side-collapse-container">
-      <div class="row">
-        <h1>Hello</h1>
-        <p>This is a side opening nav demonstration</p>
-        <p>Make your browser smaller and the top menu wil become into a lateral slider menu</p>
-      </div>
-    </div>
-    </body>
+</div>
+         </div>
+        
+
+</div>
+
+</head>
+
+ <body>
+	 
+	<div id="my_carousel" class="carousel slide" data-ride="carousel">
+	<!-- Bulles -->
+	<ol class="carousel-indicators">
+	<li data-target="#my_carousel" data-slide-to="0" class="active"></li>
+	<li data-target="#my_carousel" data-slide-to="1"></li>
+	<li data-target="#my_carousel" data-slide-to="2"></li>
+	</ol>
+	<!-- Slides -->
+	<div class="carousel-inner">
+	<!-- Page 1 -->
+	<div class="item active">  
+	<div class="carousel-page">
+	<img src="image/psg.jpg" class="img-responsive" style="margin:0px auto;" />
+	</div> 
+	<div class="carousel-caption">Maillot domicile Paris SG 2016/2017</div>
+	</div>   
+	<!-- Page 2 -->
+	<div class="item"> 
+	<div class="carousel-page"><img src="image/real-madrid.jpg" class="img-responsive img-rounded" 
+	style="margin:0px auto;"  /></div> 
+	<div class="carousel-caption">Page 2 de présentation</div>
+	</div>  
+	<!-- Page 3 -->
+	<div class="item">  
+	<div class="carousel-page">
+	<img src="image/mancity.jpg" class="img-responsive img-rounded" 
+	style="margin:0px auto;max-height:100%;"  />
+	</div>  
+	<div class="carousel-caption">Page 2 de présentation</div>
+	</div>     
+	</div>
+	<!-- Contrôles -->
+	<a class="left carousel-control" href="#my_carousel" data-slide="prev">
+	<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control" href="#my_carousel" data-slide="next">
+	<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+	</div>
+
+</body>
+<footer>
+<p>All rights reserved</p>
+</footer>
 </html>
